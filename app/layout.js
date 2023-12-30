@@ -7,10 +7,10 @@ import Footer from "./components/footer";
 
 export const metadata = {
   title: {
-    default: "Lexington Solana WEB3 Demo",
+    default: "Lexington wagmi WEB3 Demo",
     template: "%s | Lexington Demo",
   },
-  description: "A Lexington Solana WEB3 Demo.",
+  description: "A Lexington wagmi WEB3 Demo.",
 };
 
 export default function RootLayout({ children }) {

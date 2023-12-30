@@ -1,4 +1,10 @@
-import { useAccount, useConnect, useDisconnect, useEnsName } from "wagmi";
+import {
+  useAccount,
+  useConnect,
+  useDisconnect,
+  useEnsName,
+  useBalance,
+} from "wagmi";
 import { InjectedConnector } from "wagmi/connectors/injected";
 import { useSession, signIn, signOut } from "next-auth/react";
 
@@ -9,13 +15,21 @@ export default function Profile() {
     connector: new InjectedConnector(),
   });
   const { disconnect } = useDisconnect();
+  const { data, isError, isLoading } = useBalance({
+    address: { address },
+  });
 
   if (isConnected)
     return (
       <div>
-        <p className="text-xl pb-4">Connected to {ensName ?? address}</p>
+        <p className="text-xl pb-4 text-primary">
+          Connected to {ensName ?? address}
+        </p>
+        <p className="text-xl pb-4 text-primary">
+          Balance: {data?.formatted} {data?.symbol}
+        </p>
         <button
-          className="btn btn-wide btn-primary font-bold uppercase py-2"
+          className="btn btn-wide btn-accent font-bold uppercase py-2"
           onClick={() => disconnect()}
         >
           Disconnect
@@ -24,7 +38,7 @@ export default function Profile() {
     );
   return (
     <button
-      className="btn btn-wide btn-primary font-bold uppercase py-2"
+      className="btn btn-wide btn-accent font-bold uppercase py-2"
       onClick={() => connect()}
     >
       Connect

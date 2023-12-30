@@ -1,5 +1,5 @@
 {
-  "name": "lxt-solana-demo",
+  "name": "lxt-wagmi-demo",
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
@@ -28,10 +28,9 @@
     "next",
     "daisyui",
     "tailwindcss",
-    "solana",
-    "moralis"
+    "wagmi"
   ],
-  "description": "A Lexington Solana WEB3 Demo",
+  "description": "A Lexington wagmi WEB3 Demo",
   "devDependencies": {
     "autoprefixer": "^10.4.16",
     "daisyui": "^4.4.24",
