@@ -1,0 +1,41 @@
+{
+  "name": "lxt-solana-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "post-update": "yarn upgrade --latest"
+  },
+  "dependencies": {
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.34",
+    "@solana/wallet-adapter-wallets": "^0.19.24",
+    "@solana/web3.js": "^1.87.6",
+    "@wagmi/core": "^1.4.12",
+    "next": "14.0.4",
+    "next-auth": "^4.24.5",
+    "next-themes": "^0.2.1",
+    "pino-pretty": "^10.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "viem": "^1.21.1",
+    "wagmi": "^1.4.12"
+  },
+  "license": "MIT",
+  "keywords": [
+    "next",
+    "daisyui",
+    "tailwindcss",
+    "solana",
+    "moralis"
+  ],
+  "description": "A Lexington Solana WEB3 Demo",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "daisyui": "^4.4.24",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0"
+  }
+}
